@@ -2,11 +2,6 @@ package solutions.pack7_Recursion;
 
 public class GridPaths_66050859 {
 
-
-    GridPaths_66050859() {
-
-    }
-
     public static int numberOfPaths(int grid [][]) {
         if (grid == null || grid.length == 0 || grid[0].length == 0)
             return 0;
@@ -21,10 +16,12 @@ public class GridPaths_66050859 {
         int m = grid.length;
         int n = grid[0].length;
 
-        // Base cases
+        // Base
         if (i >= m || j >= n || grid[i][j] == 1) {
             return 0;
         }
+
+        // end
         if (i == m - 1 && j == n - 1) {
             return 1;
         }

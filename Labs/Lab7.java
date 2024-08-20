@@ -11,8 +11,9 @@ public class Lab7 {
         // testEqualSubsets();
         // System.out.println("----");
         testSubSets();
-        // testGridPaths();
+        testGridPaths();
     }
+    
     static void testEqualSubsets() {
         int [] a = {1,5,11,5};
         int [] b = {1,5,3};
