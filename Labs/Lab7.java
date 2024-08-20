@@ -38,6 +38,6 @@ public class Lab7 {
                           {0,0,0,1},
                           {1,0,0,0}};
         System.out.println("--- grid paths ---");
-        System.out.println("number of paths: " + GridPaths.numberOfPaths(grid));
+        System.out.println("number of paths: " + GridPaths_66050859.numberOfPaths(grid));
     }
 }
