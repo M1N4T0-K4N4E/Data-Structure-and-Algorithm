@@ -9,7 +9,7 @@ import solutions.pack7_Recursion.*;
 public class Lab7 {
     public static void main(String[] args) {
         // testEqualSubsets();
-        // System.out.println("----");
+        System.out.println("----");
         testSubSets();
         testGridPaths();
     }
@@ -30,8 +30,8 @@ public class Lab7 {
         set.add(1); set.add(2); set.add(3);
         System.out.println("using recursive method");
         Subsets_660859.printAllSubsets_Recurse(set);
-        // System.out.println("using dynamic programming method");
-        // Subsets_660859.printAllSubsets_DP(set);
+        System.out.println("using dynamic programming method");
+        Subsets_660859.printAllSubsets_DP(set);
     }
     static void testGridPaths() {
         int [][] grid = { {0,0,0,0},
