@@ -12,36 +12,33 @@ public class MyLinkedList {
 
     Node head = null;
 
-    public void add(int ... d) {
-        for (int i = d.length - 1; i > -1; i--) {
-            Node newNode = new Node(d[i]);
-            newNode.next = this.head;
-            this.head = newNode;
-        }
+    public void add(int d) {
+        Node newNode = new Node(d);
+        newNode.next = this.head;
+        this.head = newNode;
     }
 
     public void insert(int d) {
         Node tmp = this.head;
         Node prev = null;
         while(tmp != null) {
-            if (tmp.data > d) break;
-            prev = tmp;
-            tmp = tmp.next;
+            
         }
         Node n = new Node(d);
-        if (tmp != null) { // emty data or last check 
-            n.next = tmp;
-            if (prev != null) { // first index check 
-                prev.next = n;
-            } else {
-                this.head = n;
-            }
-        } else if (tmp == null && prev != null) {
-            prev.next = new Node(d);
-        } else {
-            this.head = n;
-        }
+        n.next = tmp;
+        prev.next = n;
     }
+    // public void insert(int d) {
+    //     Node tmp = this.head;
+    //     Node prev = null;
+    //     while(tmp.data < d) {
+    //         prev = tmp;
+    //         tmp = tmp.next;
+    //     }
+    //     Node n = new Node(d);
+    //     n.next = tmp;
+    //     prev.next = n;
+    // }
 
     public void insert(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -113,9 +110,7 @@ public class MyLinkedList {
     }
 
     public static void main(String[] args) {
-        System.out.println("----------demo1----------");
         demo1();
-        System.out.println("----------demo2----------");
         demo2();
     }
 }
