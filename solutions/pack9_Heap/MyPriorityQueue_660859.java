@@ -1,33 +1,40 @@
-public class MyPriorityQueue_660859 implements MyQueueInterface {
+package solutions.pack9_Heap;
+
+public class MyPriorityQueue_660859 extends MyMinHeap_660859 implements MyQueueInterface {
 
     @Override
     public void enqueue(int d) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
+        if (isFull()) {
+            System.out.println("Queue is full");
+            return;
+        }
+        super.insert(d);
     }
 
     @Override
     public int dequeue() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+        if (isEmpty()) {
+            System.out.println("Empty queue");
+            return 0;
+        }
+        int tmp = super.peek();
+        super.remove();
+        return tmp;
     }
 
     @Override
     public int front() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'front'");
+        return super.peek();
     }
 
     @Override
     public boolean isFull() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isFull'");
+        return super.isFull();
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return super.isEmpty();
     }
     
 }

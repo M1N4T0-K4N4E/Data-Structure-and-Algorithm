@@ -2,19 +2,19 @@ package Labs;
 
 import java.util.ArrayList;
 
-import solutions.pack9_Heap.MyHeapSort;
-import solutions.pack9_Heap.MyMinHeap;
-import solutions.pack9_Heap.MyPriorityQueue;
+import solutions.pack9_Heap.MyHeapSort_660859;
+import solutions.pack9_Heap.MyMinHeap_660859;
+import solutions.pack9_Heap.MyPriorityQueue_660859;
 
 public class Lab9_PQ {
     static ArrayList<Integer> least3;
     public static void main(String[] args) {
-        // System.out.println("-task1---");
-        // task1();
-        // System.out.println("-task2---");
-        // task2();
-        System.out.println("-task3---");
-        task3();
+        System.out.println("-task1---");
+        task1();
+        System.out.println("-task2---");
+        task2();
+        // System.out.println("-task3---");
+        // task3();
     }
 
     static void task1() {
@@ -45,6 +45,7 @@ public class Lab9_PQ {
         pq.enqueue(19); // isFull() is true ...discard
         System.out.println("pq structure is " + pq);
         least3.add(pq.dequeue());;
+        System.out.println("pq structure is " + pq);
         least3.add(pq.dequeue());
         least3.add(pq.dequeue());
         System.out.println("least 3 value is " + least3);

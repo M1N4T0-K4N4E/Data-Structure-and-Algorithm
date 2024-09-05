@@ -1,15 +1,18 @@
+package solutions.pack9_Heap;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MyMinHeap_660859 {
-    int MAX_SIZE = 100;
+    int MAX_SIZE = 6;
     int heap[] = new int[MAX_SIZE];
     int size = 0;
     
     public void insert(int d) {
-        heap[size++] = d;
-        int p = size;
+        int p = size++;
+        heap[p] = d;
         int parent = (size - 1) / 2;
-        while ( (p > 0) && (heap[p] < heap[parent]) ) {
+        while ( (p > 0) && (heap[p] < heap[parent]) /* && p < size */ ) {
             swap(p, parent);
             p = parent;
             parent = (p - 1) / 2;
@@ -56,6 +59,10 @@ public class MyMinHeap_660859 {
     }
 
     public String toString() {
-        return Arrays.toString(heap);
+        ArrayList<Integer> tmp = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            tmp.add(heap[i]);
+        }
+        return tmp.toString();
     }
 }
