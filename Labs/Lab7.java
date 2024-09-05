@@ -11,8 +11,9 @@ public class Lab7 {
         // testEqualSubsets();
         // System.out.println("----");
         testSubSets();
-        // testGridPaths();
+        testGridPaths();
     }
+    
     static void testEqualSubsets() {
         int [] a = {1,5,11,5};
         int [] b = {1,5,3};
@@ -38,6 +39,6 @@ public class Lab7 {
                           {0,0,0,1},
                           {1,0,0,0}};
         System.out.println("--- grid paths ---");
-        System.out.println("number of paths: " + GridPaths.numberOfPaths(grid));
+        System.out.println("number of paths: " + GridPaths_66050859.numberOfPaths(grid));
     }
 }
