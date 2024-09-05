@@ -1,6 +1,5 @@
 package Labs;
 
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +7,7 @@ import solutions.pack7_Recursion.*;
 
 public class Lab7 {
     public static void main(String[] args) {
-        // testEqualSubsets();
+        testEqualSubsets();
         System.out.println("----");
         testSubSets();
         testGridPaths();
