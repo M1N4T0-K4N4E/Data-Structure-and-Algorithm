@@ -68,8 +68,11 @@ public class BST_660859 {
                     }
                     // delete
                     tmp.data = maxLeft.data;
-                    
-                    prevTmp2.right = null;
+                    if (prevTmp2.right == null) {
+                        prevTmp2.left = prevTmp2.left.left;
+                    } else {
+                        prevTmp2.right = null;
+                    }
                 } else if (tmp.left != null) { // 1 child left
                     prev.left = tmp.left;
                 } else if (tmp.right != null) { // 1 child right
