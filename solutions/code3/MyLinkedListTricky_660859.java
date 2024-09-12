@@ -13,7 +13,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
             tmp.next = tmphead;
         }
     }
-    
+
     public void q2_reverse() {
         Node tmpNode = this.head;
         this.head = null;
@@ -22,7 +22,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
             tmpNode = tmpNode.next;
         }
     }
-    
+
     public void q3_remove_dup() {
         Node tmp = this.head;
         while (tmp != null) {
@@ -55,7 +55,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
         }
         add(sumSplit);
     }
-    
+
     public boolean q5_isPalindrome() {
         int size = 0;
         Node tmp = this.head;
@@ -78,7 +78,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
         }
         return true;
     }
-    
+
     static void q1() {
         int [] d = {10,20,30,40,50};
         MyLinkedListTricky_660859 mList = new MyLinkedListTricky_660859();
@@ -108,7 +108,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
         System.out.println("before -> " + mList);
         mList.q3_remove_dup();
         System.out.println("after -> " + mList);
-        
+
         int [] e = {13, 11, 15, 4};
         mList = new MyLinkedListTricky_660859();
         mList.insert(e);
@@ -116,7 +116,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
         mList.q3_remove_dup();
         System.out.println("after -> " + mList);
     }
-    
+
     static void q4() {
         int [] d = {1, 9, 9, 9};
         MyLinkedListTricky_660859 mList = new MyLinkedListTricky_660859();
@@ -125,7 +125,7 @@ public class MyLinkedListTricky_660859 extends MyLinkedList {
         mList.q4_add_one();
         System.out.println("after -> " + mList);
     }
-    
+
 
     static void q5() {
         int [] d = {21, 33, 33, 21};
