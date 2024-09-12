@@ -50,15 +50,15 @@ public class MyLinkedList {
     // }
 
     public void insert(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            insert(arr[i]);
+        for (int j : arr) {
+            insert(j);
         }
     }
 
     public int find(int d) {
         int i = 0;
         Node tmp = head;
-        while (tmp != null) {
+        while (tmp.next != null) {
             if (tmp.data == d) break;
             i++;
             tmp = tmp.next;

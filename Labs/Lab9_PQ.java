@@ -44,7 +44,7 @@ public class Lab9_PQ {
         pq.enqueue(18);
         pq.enqueue(19); // isFull() is true ...discard
         System.out.println("pq structure is " + pq);
-        least3.add(pq.dequeue());;
+        least3.add(pq.dequeue());
         System.out.println("pq structure is " + pq);
         least3.add(pq.dequeue());
         least3.add(pq.dequeue());
