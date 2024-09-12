@@ -5,15 +5,15 @@ import solutions.pack10_BST.*;
 public class Lab10_BST_Main {
 	public static void main(String[] args) {
 		System.out.println("Example output:");
-		task1();
+		// task1();
 		task2();
-		task3();
+		// task3();
 	}
 	public static void task1() {
 		System.out.println("--- task 1 ---");
 		int data[] = { 15, 20, 10, 18, 16, 12, 8, 25, 19, 30 };
 		
-		BST bst = new BST();
+		BST_660859 bst = new BST_660859();
 		for (int i=0; i<data.length; i++)
 			bst.insert(data[i]);
 
@@ -33,7 +33,7 @@ public class Lab10_BST_Main {
 		int data[] = {60, 41, 65, 63, 70, 53,
 					  16, 46, 55, 62, 64, 42};
 		
-		BST bst = new BST();
+		BST_660859 bst = new BST_660859();
 		for (int i=0; i<data.length; i++)
 			bst.insert(data[i]);
 
@@ -58,7 +58,7 @@ public class Lab10_BST_Main {
 		System.out.println("-- test find median --");
 		int data[] = { 20, 22, 8, 12, 4, 10, 14 };
 		
-		BST bst = new BST();
+		BST_660859 bst = new BST_660859();
 		for (int i=0; i<data.length; i++)
 			bst.insert(data[i]);
 		System.out.println(bst.findMedian()); // 12.0
@@ -71,7 +71,7 @@ public class Lab10_BST_Main {
 		System.out.println("-- test find closest --");
 		int data[] = { 9, 4, 17, 3, 6, 22, 5, 7, 20 };
 		
-		BST bst = new BST();
+		BST_660859 bst = new BST_660859();
 		for (int i=0; i<data.length; i++)
 			bst.insert(data[i]);
 		System.out.println(bst.findClosest(4)); // 4
@@ -83,7 +83,7 @@ public class Lab10_BST_Main {
 		System.out.println("-- test find rank --");
 		int data[] = { 15, 20, 10, 18, 16, 12, 8, 25, 19, 30 };
 		
-		BST bst = new BST();
+		BST_660859 bst = new BST_660859();
 		for (int i=0; i<data.length; i++)
 			bst.insert(data[i]);
 		System.out.println(bst.findRank(12)); // 3
