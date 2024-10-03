@@ -44,21 +44,21 @@ public class Lab9_PQ {
         pq.enqueue(18);
         pq.enqueue(19); // isFull() is true ...discard
         System.out.println("pq structure is " + pq);
-        least3.add(pq.dequeue());;
+        least3.add(pq.dequeue());
         System.out.println("pq structure is " + pq);
         least3.add(pq.dequeue());
         least3.add(pq.dequeue());
         System.out.println("least 3 value is " + least3);
     }
 
-    static void task3() {
-        MyHeapSort heap = new MyHeapSort();
-        heap.insert(11);
-        heap.insert(15);
-        heap.insert(16);
-        heap.insert(13);
-        heap.insert(17);
-        heap.insert(18);        
-        System.out.println(heap.sort());
-    }
+//    static void task3() {
+//        MyHeapSort_660859 heap = new MyHeapSort_660859();
+//        heap.insert(11);
+//        heap.insert(15);
+//        heap.insert(16);
+//        heap.insert(13);
+//        heap.insert(17);
+//        heap.insert(18);
+//        System.out.println(heap.sort());
+//    }
 }

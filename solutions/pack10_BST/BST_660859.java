@@ -1,5 +1,8 @@
 package solutions.pack10_BST;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 public class BST_660859 {
     TreeNode_660859 root;
     
@@ -58,17 +61,17 @@ public class BST_660859 {
             if (tmp.data == d) { // found
                 if (tmp.left != null && tmp.right != null) { // 2 child
                     // find max left
-                    TreeNode_660859 maxLeft = null;
-                    TreeNode_660859 tmp2 = tmp.left;
                     TreeNode_660859 prevTmp2 = tmp;
-                    while (tmp2 != null) {
+                    TreeNode_660859 tmp2 = tmp.left;
+                    TreeNode_660859 maxLeft = tmp2;
+                    while (tmp2.right != null) {
                         maxLeft = tmp2;
                         prevTmp2 = tmp2;
                         tmp2 = tmp2.right;
                     }
                     // delete
                     tmp.data = maxLeft.data;
-                    if (prevTmp2.right == null) {
+                    if (maxLeft.left != null) {
                         prevTmp2.left = prevTmp2.left.left;
                     } else {
                         prevTmp2.right = null;
@@ -118,9 +121,15 @@ public class BST_660859 {
         return heightRecurse(root);
     }
 
+<<<<<<< HEAD
     public int heightRecurse(TreeNode_660859 node) {
         if (node == null) return 0;
         return Math.max(heightRecurse(node.left) + 1, heightRecurse(node.right) + 1);
+=======
+    private int heightRecurse(TreeNode_660859 node) {
+        return 1 + Math.max(node.left == null ? 0 : heightRecurse(node.left),
+                        node.right == null ? 0 : heightRecurse(node.right));
+>>>>>>> 09e1f91291f0e11b368704e522ea97ab89d7b50f
     }
 
     public int count() {
@@ -130,6 +139,35 @@ public class BST_660859 {
     private int nodeCountingRecurse(TreeNode_660859 node) {
         return (node.left == null ? 0 : nodeCountingRecurse(node.left))
                + (node.right == null ? 0 : nodeCountingRecurse(node.right)) + 1;
+    }
+
+    public long findMedian() {
+        if (root == null) return 0;
+        TreeNode_660859 tmp = root;
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        traverseToArray(arr, root);
+        arr.sort(Integer::compareTo);
+        long median = 0;
+        if (arr.size() % 2 == 0) {
+            median = (arr.get(arr.size() / 2) + arr.get((arr.size() / 2) - 1)) / 2;
+        } else {
+            median = arr.get(arr.size() / 2);
+        }
+        return median;
+    }
+
+    public int findRank(int d) {
+        if (root == null) return -1;
+        ArrayList<Integer> arr = new ArrayList<>();
+        traverseToArray(arr, root);
+        arr.sort(Integer::compareTo);
+        return !arr.contains(d) ? -1 : arr.indexOf(d) + 1;
+    }
+
+    private void traverseToArray(ArrayList<Integer> arr, TreeNode_660859 node) {
+        arr.add(node.data);
+        if (node.left != null) traverseToArray(arr, node.left);
+        if (node.right != null) traverseToArray(arr, node.right);
     }
 
     /* Printing */

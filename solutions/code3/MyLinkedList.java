@@ -12,6 +12,12 @@ public class MyLinkedList {
 
     Node head = null;
 
+    public void add(int [] d) {
+        for (int i = d.length - 1; i >= 0; i--) {
+            add(d[i]);
+        }
+    }
+
     public void add(int d) {
         Node newNode = new Node(d);
         newNode.next = this.head;
@@ -22,11 +28,14 @@ public class MyLinkedList {
         Node tmp = this.head;
         Node prev = null;
         while(tmp != null) {
-            
+            if(tmp.data >= d) break;
+            prev = tmp;
+            tmp = tmp.next;
         }
         Node n = new Node(d);
         n.next = tmp;
-        prev.next = n;
+        if(prev != null) prev.next = n;
+        else head = n;
     }
     // public void insert(int d) {
     //     Node tmp = this.head;
@@ -41,15 +50,15 @@ public class MyLinkedList {
     // }
 
     public void insert(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            insert(arr[i]);
+        for (int j : arr) {
+            insert(j);
         }
     }
 
     public int find(int d) {
         int i = 0;
         Node tmp = head;
-        while (tmp != null) {
+        while (tmp.next != null) {
             if (tmp.data == d) break;
             i++;
             tmp = tmp.next;
