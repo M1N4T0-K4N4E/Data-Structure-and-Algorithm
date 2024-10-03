@@ -115,7 +115,12 @@ public class BST_660859 {
     }
 
     public int height() {
-        return 0;
+        return heightRecurse(root);
+    }
+
+    public int heightRecurse(TreeNode_660859 node) {
+        if (node == null) return 0;
+        return Math.max(heightRecurse(node.left) + 1, heightRecurse(node.right) + 1);
     }
 
     public int count() {

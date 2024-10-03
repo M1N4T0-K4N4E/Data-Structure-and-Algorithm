@@ -5,7 +5,7 @@ import solutions.pack10_BST.*;
 public class Lab10_BST_Main {
 	public static void main(String[] args) {
 		System.out.println("Example output:");
-		// task1();
+		task1();
 		task2();
 		// task3();
 	}
